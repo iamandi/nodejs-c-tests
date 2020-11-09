@@ -1,5 +1,7 @@
 # Build
 build/
+Dockerfile
+.vscode/
 
 # Logs
 logs

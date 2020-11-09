@@ -1,0 +1,59 @@
+/usr/bin/cc ./server-ccnx.c.o  -o server-ccnx  -L/home/otocn/CCNx_Distillery/usr/lib  -L/./home/otocn/CCNx_Distillery/usr/lib -rdynamic -llongbow -llongbow-ansiterm -lparc -lccnx_common -lccnx_api_portal -lccnx_transport_rta -lccnx_api_control -lccnx_api_notify -lotocn -Wl,-rpath,/home/otocn/CCNx_Distillery/usr/lib:/./home/otocn/CCNx_Distillery/usr/lib: 
+
+/usr/bin/cc -DOTOCN=1 -I/home/otocn/CCNx_Distillery/usr/include -I/./home/otocn/CCNx_Distillery/usr/include  -std=gnu99 -o ./server-ccnx.c.o   -c ./server-ccnx.c
+
+
+
+/usr/bin/cc  -DOTOCN=1 -DRELEASE_VERSION=\"1.0.20170209.e86cb442\" -I/home/otocn/CCNx_Distillery/usr/include -I/./home/otocn/CCNx_Distillery/usr/include -Wall -std=gnu99 -o ./ccnx-server.c.o -c ./ccnx-server.c
+
+/usr/bin/cc   -Wall   ./ccnx-server.c.o -o ccnx-server  -L/home/otocn/CCNx_Distillery/usr/lib -rdynamic -lm /home/otocn/CCNx_Distillery/usr/lib/liblongbow.so \ 
+ /home/otocn/CCNx_Distillery/usr/lib/liblongbow-textplain.so /usr/local/lib/libevent.so -lssl -lcrypto -lpthread home/otocn/CCNx_Distillery/usr/lib/libccnx_api_portal.a \ 
+ /home/otocn/CCNx_Distillery/usr/lib/libccnx_transport_rta.so /home/otocn/CCNx_Distillery/usr/lib/libccnx_api_control.so \ 
+ /home/otocn/CCNx_Distillery/usr/lib/libccnx_api_notify.so /home/otocn/CCNx_Distillery/usr/lib/libccnx_common.so -lotocn \ 
+ /home/otocn/CCNx_Distillery/usr/lib/libparc.so -lm -Wl,-rpath,/home/otocn/CCNx_Distillery/usr/lib:/usr/local/lib: 
+
+
+/usr/bin/cc -Wall ./ccnx-server.c.o -o ccnx-server -L/home/otocn/CCNx_Distillery/usr/lib  -L/./home/otocn/CCNx_Distillery/usr/lib -rdynamic -llongbow -llongbow-ansiterm -lparc -lccnx_common -lccnx_api_portal -lccnx_transport_rta -lccnx_api_control -lccnx_api_notify -lotocn -Wl,-rpath,/home/otocn/CCNx_Distillery/usr/lib:/./home/otocn/CCNx_Distillery/usr/lib:
+
+
+/usr/bin/cc -Wall ./ccnx-client.c.o -o ccnx-client -L/home/otocn/CCNx_Distillery/usr/lib  -L/./home/otocn/CCNx_Distillery/usr/lib -rdynamic -llongbow -llongbow-ansiterm -lparc -lccnx_common -lccnx_api_portal -lccnx_transport_rta -lccnx_api_control -lccnx_api_notify -lotocn -Wl,-rpath,/home/otocn/CCNx_Distillery/usr/lib:/./home/otocn/CCNx_Distillery/usr/lib:
+
+
+[100%] Linking C executable ccnx-client-loop
+cd /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/build/Libccnx-portal/ccnx/api/ccnx_Portal/command-line && /usr/bin/cmake -E cmake_link_script CMakeFiles/ccnx-client-loop.dir/link.txt --verbose=1
+
+/usr/bin/cc  -Wall -g  -rdynamic CMakeFiles/ccnx-client.dir/ccnx-client.c.o CMakeFiles/ccnx-client.dir/ccnxPortalClient_About.c.o  -o ccnx-client -Wl,-rpath,/home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib: -lm \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow-textplain.so -lssl -lcrypto -lpthread ../libccnx_api_portal.a \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_transport_rta.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_control.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_notify.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_common.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libotocn.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libparc.so -lm 
+
+
+/usr/bin/cc  -Wall -g -shared -fpic -rdynamic ./ccnx-client.c.o  -o ccnx-client.so -Wl,-rpath,/home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib: -lm \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow-textplain.so -lssl -lcrypto -lpthread \ 
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_portal.a \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_transport_rta.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_control.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_notify.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_common.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libotocn.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libparc.so -lm 
+
+
+ /usr/bin/cc  -Wall -g  -rdynamic CMakeFiles/ccnx-server.dir/ccnx-server.c.o CMakeFiles/ccnx-server.dir/ccnxPortalServer_About.c.o \
+ -o ccnx-server -Wl,-rpath,/home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib: -lm /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow.so \ 
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow-textplain.so -lssl -lcrypto -lpthread ../libccnx_api_portal.a \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_transport_rta.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_control.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_notify.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_common.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libotocn.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libparc.so -lm 
+
+
+/usr/bin/cc  -Wall -g  -rdynamic CMakeFiles/ccnx-client-loop.dir/ccnx-client-loop.c.o CMakeFiles/ccnx-client-loop.dir/ccnxPortalClient_About.c.o \ 
+ -o ccnx-client-loop -Wl,-rpath,/home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib: -lm /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow.so \
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow-textplain.so -lssl -lcrypto -lpthread ../libccnx_api_portal.a \ 
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_transport_rta.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_control.so \ 
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_notify.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_common.so \ 
+ /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libotocn.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libparc.so -lm 
+
+cd /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/build/Libccnx-portal/ccnx/api/ccnx_Portal && /usr/bin/cmake -E cmake_symlink_library libccnx_api_portal.so.1.0 libccnx_api_portal.so.1 libccnx_api_portal.so
+
+/usr/bin/cc -fPIC -fpic -Wall -g -shared -rdynamic ./ccnx-client.c.o -o ccnx-client.so -Wl,-rpath,/home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib: -lm /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/liblongbow-textplain.so -lssl -lcrypto -lpthread /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_portal.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_transport_rta.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_control.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_api_notify.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libccnx_common.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libotocn.so /home/andy/otocn/ccnx_distillery_jgo/ccnx_distillery_otocn/usr/lib/libparc.so -lm 
+
+/usr/bin/cc -fPIC  -Wall -g  -shared -Wl,-soname,libccnx_api_portal.so.1 -o libccnx_api_portal.so.1.0 CMakeFiles/ccnx_api_portal.shared.dir/ccnx_Portal.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalFactory.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalAttributes.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalStack.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalRTA.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalAPI.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnx_PortalAnchor.c.o CMakeFiles/ccnx_api_portal.shared.dir/ccnxPortal_About.c.o -Wl,-rpath,:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -lm
