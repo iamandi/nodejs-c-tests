@@ -1,6 +1,6 @@
-var ffi = require("ffi");
+var ffi = require("ffi-napi");
 
-var libccnxClient = ffi.Library("./libccnx-client", {
+var libccnxClient = ffi.Library("./libccnx_client", {
   ccnxClient: ["int", ["string", "string", "string"]],
 });
 
@@ -12,7 +12,7 @@ if (process.argv.length < 2) {
 }
 
 const keyfile =
-  "/home/andy/otocn/ccnx_distillery_otocn/key-store/keystoreserver.otocn";
+  "/home/otocn/CCNx_Distillery/key-store/keystoreserver.otocn";
 const keypassword = "123321";
 const ccnxName = "lci:/ccn-name/4";
 
